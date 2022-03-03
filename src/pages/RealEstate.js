@@ -22,7 +22,7 @@ import json from '../transactions/transactions.json'
 const RealEstate = () => {
     const imgs = [imgProp1, imgProp2, imgProp3, imgProp4, imgProp5]
 
-    const [properties, setProperties] = useState(json.properties)
+    const [properties] = useState(json.properties)
     const [isAsc, setIsAsc] = useState(true)
     const [minNumOfRoom, setMinNumOfRoom] = useState(2)
     const [filterBy, setFilterBy] = useState('')
