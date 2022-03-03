@@ -19,14 +19,9 @@ import imgProp4 from '../Images/prop4.jpg'
 import imgProp5 from '../Images/prop5.jpg'
 import json from '../transactions/transactions.json'
 
-
-// import { DataGrid } from '@mui/x-data-grid';
-
 const RealEstate = () => {
     const imgs = [imgProp1, imgProp2, imgProp3, imgProp4, imgProp5]
-    // json.properties.map(property => {
-    //     return
-    // })
+
     const [properties, setProperties] = useState(json.properties)
     const [isAsc, setIsAsc] = useState(true)
     const [minNumOfRoom, setMinNumOfRoom] = useState(2)
