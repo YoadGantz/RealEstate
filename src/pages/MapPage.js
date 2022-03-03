@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import mapboxgl from 'mapbox-gl';
+
+//eslint-disable-next-line
+import mapboxgl from '!mapbox-gl' 
+
 import {
     FormControl,
     InputLabel,
