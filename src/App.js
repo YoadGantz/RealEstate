@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter, Routes, Route
+} from 'react-router-dom'
+import RealEstate from './pages/RealEstate';
+import Header from './components/Header';
+import MapPage from './pages/MapPage';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/map" element={<MapPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+
+function Home() {
+  return <h2>Welcome to Yoad's assignment</h2>;
+}
